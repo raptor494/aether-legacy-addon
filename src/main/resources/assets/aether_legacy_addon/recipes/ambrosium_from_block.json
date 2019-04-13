@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ambrosium",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "aether_legacy:ambrosium_block"
+    }
+  },
+  "result": {
+    "item": "aether_legacy:ambrosium_shard",
+    "count": 9
+  }
+}
