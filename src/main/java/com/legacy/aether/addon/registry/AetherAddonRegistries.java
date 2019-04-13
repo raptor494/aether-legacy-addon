@@ -87,8 +87,10 @@ public class AetherAddonRegistries {
 		if (!enable_quicksoil_glass_pane)
 			craftingRegistry.remove(AetherAddon.locate("quicksoil_glass_pane"));
 		
-		if (!enable_ambrosium_block)
+		if (!enable_ambrosium_block) {
 			craftingRegistry.remove(AetherAddon.locate("ambrosium_block"));
+			craftingRegistry.remove(AetherAddon.locate("ambrosium_from_block"));
+		}
 	}
 	
 	private static void removeColoredBedRecipes() {
