@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "aether_legacy:zanite_gemstone"
+      "item": "aether_legacy:ambrosium_shard"
     }
   },
   "result": {
-    "item": "aether_legacy:zanite_block"
+    "item": "aether_legacy:ambrosium_block"
   }
 }
