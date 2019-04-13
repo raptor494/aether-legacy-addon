@@ -1,0 +1,1 @@
+# aether-legacy-addon

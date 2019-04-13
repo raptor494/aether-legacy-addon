@@ -1,0 +1,7 @@
+{
+    "parent": "block/wooden_door_bottom",
+    "textures": {
+        "bottom": "aether_legacy:blocks/door_skyroot_lower",
+        "top": "aether_legacy:blocks/door_skyroot_upper"
+    }
+}

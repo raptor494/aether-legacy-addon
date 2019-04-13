@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "aether_legacy:blocks/skyroot_crafting_table_front",
+        "down": "aether_legacy:blocks/skyroot_plank",
+        "up": "aether_legacy:blocks/skyroot_crafting_table_top",
+        "north": "aether_legacy:blocks/skyroot_crafting_table_front",
+        "east": "aether_legacy:blocks/skyroot_crafting_table_side",
+        "south": "aether_legacy:blocks/skyroot_crafting_table_side",
+        "west": "aether_legacy:blocks/skyroot_crafting_table_front"
+    }
+}

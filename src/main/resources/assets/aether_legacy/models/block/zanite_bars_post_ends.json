@@ -1,0 +1,7 @@
+{
+	"parent": "block/iron_bars_post_ends",
+	"textures": {
+		"particle": "aether_legacy:blocks/zanite_bars",
+		"edge": "aether_legacy:blocks/zanite_bars"
+	}
+}

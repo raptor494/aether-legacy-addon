@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bed",
+  "pattern": [
+    "###",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "wool"
+    },
+    "X": { "item": "aether_legacy:skyroot_plank" }},
+  "result": {
+    "item": "aether_legacy:skyroot_bed",
+    "data": 3
+  }
+}

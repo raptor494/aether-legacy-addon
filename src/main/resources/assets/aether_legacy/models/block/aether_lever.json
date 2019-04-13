@@ -1,0 +1,8 @@
+{
+    "parent": "block/lever",
+    "textures": {
+        "particle": "aether_legacy:blocks/holystone",
+        "base": "aether_legacy:blocks/holystone",
+        "lever": "aether_legacy:blocks/aether_lever"
+    }
+}

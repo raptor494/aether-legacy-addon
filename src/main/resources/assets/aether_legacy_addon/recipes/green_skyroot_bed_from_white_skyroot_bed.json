@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dyed_bed",
+  "ingredients": [
+    {
+      "item": "aether_legacy:skyroot_bed",
+      "data": 0
+    },
+    {
+      "item": "minecraft:dye",
+      "data": 2
+    }
+  ],
+  "result": {
+    "item": "aether_legacy:skyroot_bed",
+    "data": 13
+  }
+}

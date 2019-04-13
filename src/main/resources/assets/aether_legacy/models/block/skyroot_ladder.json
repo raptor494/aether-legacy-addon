@@ -1,0 +1,7 @@
+{
+	"parent": "block/ladder",
+    "textures": {
+        "particle": "aether_legacy:blocks/skyroot_ladder",
+        "texture": "aether_legacy:blocks/skyroot_ladder"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/iron_trapdoor_top",
+    "textures": {
+        "texture": "aether_legacy:blocks/zanite_trapdoor"
+    }
+}

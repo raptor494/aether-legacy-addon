@@ -1,0 +1,6 @@
+{
+    "parent": "block/wooden_trapdoor_open",
+    "textures": {
+        "texture": "aether_legacy:blocks/skyroot_trapdoor"
+    }
+}
