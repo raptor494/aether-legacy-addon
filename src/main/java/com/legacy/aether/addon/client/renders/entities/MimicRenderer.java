@@ -17,10 +17,11 @@ public class MimicRenderer extends com.legacy.aether.client.renders.entities.Mim
 		super(renderManager);
 	}
 
+	@Override
 	protected ResourceLocation getEntityTexture(EntityMimic entity) {
 		Calendar calendar = Calendar.getInstance();
 
-		if (calendar.get(2) + 1 == 12 && calendar.get(5) >= 24 && calendar.get(5) <= 26) {
+		if (calendar.get(Calendar.MONTH) + 1 == 12 && calendar.get(Calendar.DAY_OF_MONTH) >= 24 && calendar.get(Calendar.DAY_OF_MONTH) <= 26) {
 			return XMAS_TEXTURE;
 		} else if (AetherAddonConfig.enable_skyroot_chest) {
 			return SKYROOT_TEXTURE;

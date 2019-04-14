@@ -6,12 +6,12 @@ import static com.legacy.aether.client.renders.AetherEntityRenderingRegistry.reg
 import com.legacy.aether.addon.client.renders.blocks.SkyrootBedRenderer;
 import com.legacy.aether.addon.client.renders.blocks.SkyrootChestRenderer;
 import com.legacy.aether.addon.client.renders.blocks.SkyrootSignRenderer;
+import com.legacy.aether.addon.client.renders.entities.MimicRenderer;
 import com.legacy.aether.addon.tile_entities.TileEntitySkyrootBed;
 import com.legacy.aether.addon.tile_entities.TileEntitySkyrootChest;
 import com.legacy.aether.addon.tile_entities.TileEntitySkyrootSign;
 import com.legacy.aether.blocks.BlocksAether;
 import com.legacy.aether.client.renders.AetherEntityRenderingRegistry;
-import com.legacy.aether.client.renders.entities.MimicRenderer;
 import com.legacy.aether.entities.hostile.EntityMimic;
 import com.legacy.aether.tile_entities.TileEntityChestMimic;
 

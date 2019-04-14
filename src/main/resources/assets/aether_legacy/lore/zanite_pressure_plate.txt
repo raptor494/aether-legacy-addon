@@ -1,0 +1,1 @@
+A pressure plate only activated by players.

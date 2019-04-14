@@ -88,7 +88,7 @@ public class SkyrootSignRenderer extends TileEntitySignRenderer {
 					ITextComponent itextcomponent = te.signText[j];
 					List<ITextComponent> list = GuiUtilRenderComponents.splitText(itextcomponent, 90, fontrenderer,
 							false, true);
-					String s = list != null && !list.isEmpty() ? ((ITextComponent) list.get(0)).getFormattedText() : "";
+					String s = list != null && !list.isEmpty() ? "\u00a7f" + ((ITextComponent) list.get(0)).getFormattedText() : "";
 
 					if (j == te.lineBeingEdited) {
 						s = "> " + s + " <";

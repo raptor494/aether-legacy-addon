@@ -1,7 +1,9 @@
 package com.legacy.aether.addon.items;
 
+import com.legacy.aether.addon.AetherAddonConfig;
 import com.legacy.aether.addon.blocks.BlocksAetherAddon;
 import com.legacy.aether.addon.tile_entities.TileEntitySkyrootBed;
+import com.legacy.aether.registry.creative_tabs.AetherCreativeTabs;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
@@ -38,7 +40,6 @@ public class ItemSkyrootBed extends ItemBed {
 
 			public void renderByItem(ItemStack stack, float partialTicks) {
 				Item item = stack.getItem();
-				System.out.println("Rendering bed");
 				if(item == ItemsAetherAddon.skyroot_bed) {
 					this.bed.setItemValues(stack);
 					TileEntityRendererDispatcher.instance.render(this.bed, 0.0D, 0.0D, 0.0D, 0.0F, partialTicks);
@@ -54,13 +55,15 @@ public class ItemSkyrootBed extends ItemBed {
 	}*/
 
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items) {
-		//if (AetherAddonConfig.enable_colored_skyroot_beds()) {
+		if (tab != AetherCreativeTabs.blocks) return;
+		
+		if (AetherAddonConfig.enable_colored_skyroot_beds()) {
 			for(EnumDyeColor color : EnumDyeColor.values()) {
 				items.add(new ItemStack(this, 1, color.getMetadata()));
 			}
-		/*} else {
+		} else {
 			items.add(new ItemStack(this, 1, EnumDyeColor.LIGHT_BLUE.getMetadata()));
-		}*/
+		}
 	}
 	
 	/**
