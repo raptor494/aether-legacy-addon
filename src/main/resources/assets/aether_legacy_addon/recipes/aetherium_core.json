@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "aether_legacy:golden_amber"
+		},
+		{
+			"item": "aether_legacy:swetty_ball"
+		},
+		{
+			"item": "aether_legacy:zanite_gemstone"
+		}
+	],
+	"result": {
+		"item": "aether_legacy:aetherium_core"
+	}
+}

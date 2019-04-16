@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:packed_ice"
+    },
+    "C": {
+      "item": "aether_legacy:aetherium_core"
+    }
+  },
+  "result": {
+    "item": "aether_legacy:aetherion_chest"
+  }
+}

@@ -35,6 +35,10 @@ public class AetherAddonConfig {
 	})*/
 	public static boolean enable_skyroot_chest = true;
 	
+	@Config.Name("Aetherion Chest")
+	@Config.RequiresMcRestart
+	public static boolean enable_aetherion_chest = true;
+	
 	@Config.Name("Skyroot sign")
 	@Config.RequiresMcRestart
 	public static boolean enable_skyroot_sign = true;
@@ -191,6 +195,10 @@ public class AetherAddonConfig {
 	@Config.Name("Ambrosium block")
 	@Config.RequiresMcRestart
 	public static boolean enable_ambrosium_block = true;
+	
+	@Config.Name("Cockatrice meat")
+	@Config.RequiresMcRestart
+	public static boolean enable_cockatrice_meat = true;
 	
 	/*@Config.Name("Aether portal sound")
 	@Config.Comment({

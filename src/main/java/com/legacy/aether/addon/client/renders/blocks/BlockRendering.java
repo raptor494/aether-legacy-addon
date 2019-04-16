@@ -40,6 +40,8 @@ public class BlockRendering {
 		
 		if (enable_skyroot_chest)
 			register(BlocksAetherAddon.skyroot_chest, "skyroot_chest");
+		if (enable_aetherion_chest)
+			register(BlocksAetherAddon.aetherion_chest, "aetherion_chest");
 		if (enable_skyroot_crafting_table)
 			register(BlocksAetherAddon.skyroot_workbench, "skyroot_crafting_table");
 		if (enable_skyroot_ladder)
@@ -64,8 +66,6 @@ public class BlockRendering {
 			register(BlocksAetherAddon.zanite_bars, "zanite_bars");
 		if (enable_quicksoil_glass_pane)
 			register(BlocksAetherAddon.quicksoil_glass_pane, "quicksoil_glass_pane");
-		
-		register(BlocksAether.aether_portal, "aether_portal");
 		
 		AetherAddonEntityRenderingRegistry.registerTileEntities();
 	}

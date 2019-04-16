@@ -3,10 +3,12 @@ package com.legacy.aether.addon.client.renders;
 import static com.legacy.aether.addon.AetherAddonConfig.*;
 import static com.legacy.aether.client.renders.AetherEntityRenderingRegistry.register;
 
+import com.legacy.aether.addon.client.renders.blocks.AetherionChestRenderer;
 import com.legacy.aether.addon.client.renders.blocks.SkyrootBedRenderer;
 import com.legacy.aether.addon.client.renders.blocks.SkyrootChestRenderer;
 import com.legacy.aether.addon.client.renders.blocks.SkyrootSignRenderer;
 import com.legacy.aether.addon.client.renders.entities.MimicRenderer;
+import com.legacy.aether.addon.tile_entities.TileEntityAetherionChest;
 import com.legacy.aether.addon.tile_entities.TileEntitySkyrootBed;
 import com.legacy.aether.addon.tile_entities.TileEntitySkyrootChest;
 import com.legacy.aether.addon.tile_entities.TileEntitySkyrootSign;
@@ -42,6 +44,9 @@ public class AetherAddonEntityRenderingRegistry {
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityChestMimic.class, new SkyrootChestRenderer());
 			
 			ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(BlocksAether.chest_mimic), 0, TileEntitySkyrootChest.class);
+		}
+		if (enable_aetherion_chest) {
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAetherionChest.class, new AetherionChestRenderer());
 		}
 	}
 }

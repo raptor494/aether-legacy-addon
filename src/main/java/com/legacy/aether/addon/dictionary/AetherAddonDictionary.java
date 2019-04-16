@@ -1,8 +1,8 @@
 package com.legacy.aether.addon.dictionary;
 
+import static com.legacy.aether.addon.AetherAddonConfig.*;
 import static com.legacy.aether.dictionary.AetherDictionary.register;
 
-import static com.legacy.aether.addon.AetherAddonConfig.*;
 import com.legacy.aether.addon.blocks.BlocksAetherAddon;
 import com.legacy.aether.addon.items.ItemsAetherAddon;
 import com.legacy.aether.blocks.BlocksAether;
@@ -13,6 +13,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 /**
  * @see AetherDictionary
+ * @see OreDictionary
  */
 public class AetherAddonDictionary {
 	@SuppressWarnings("unused")
@@ -29,6 +30,10 @@ public class AetherAddonDictionary {
 		if (enable_skyroot_chest) {
 			register("chest", BlocksAetherAddon.skyroot_chest);
 			register("chestWood", BlocksAetherAddon.skyroot_chest);
+		}
+		if (enable_aetherion_chest) {
+			register("chest", BlocksAetherAddon.aetherion_chest);
+			register("chestAetherion", BlocksAetherAddon.aetherion_chest);
 		}
 		if (enable_skyroot_crafting_table)
 			register("workbench", BlocksAetherAddon.skyroot_workbench);

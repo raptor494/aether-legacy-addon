@@ -15,6 +15,7 @@ public class BlockAmbrosium extends Block {
 		setHardness(3.0F);
 		setResistance(5.0F);
 		setSoundType(SoundType.STONE);
+		setLightLevel(0.9375F);
 	}
 	
 	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon) {

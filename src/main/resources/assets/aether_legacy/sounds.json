@@ -1,0 +1,10 @@
+{
+	"aemisc.aether_portal.idle": {
+		"category": "neutral",
+		"replace": true,
+		"subtitle": "subtitles.aemisc.portal.idle",
+		"sounds": [
+			"minecraft:liquid/water"
+		]
+	}
+}

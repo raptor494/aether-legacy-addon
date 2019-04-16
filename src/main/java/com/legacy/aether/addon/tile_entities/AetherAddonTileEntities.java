@@ -15,6 +15,8 @@ public class AetherAddonTileEntities {
 	public static void initialization() {
 		if (enable_skyroot_chest)
 			GameRegistry.registerTileEntity(TileEntitySkyrootChest.class, Aether.locate("skyroot_chest"));
+		if (enable_aetherion_chest)
+			GameRegistry.registerTileEntity(TileEntityAetherionChest.class, Aether.locate("aetherion_chest"));
 		if (enable_skyroot_beds)
 			GameRegistry.registerTileEntity(TileEntitySkyrootBed.class, Aether.locate("skyroot_bed"));
 		if (enable_skyroot_sign)

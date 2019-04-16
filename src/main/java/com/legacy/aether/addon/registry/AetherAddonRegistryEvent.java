@@ -3,6 +3,7 @@ package com.legacy.aether.addon.registry;
 import com.legacy.aether.addon.blocks.BlocksAetherAddon;
 import com.legacy.aether.addon.dictionary.AetherAddonDictionary;
 import com.legacy.aether.addon.items.ItemsAetherAddon;
+import com.legacy.aether.api.enchantments.AetherEnchantment;
 import com.legacy.aether.registry.AetherRegistryEvent;
 
 import net.minecraft.block.Block;
@@ -72,10 +73,13 @@ public class AetherAddonRegistryEvent {
 
 	@SubscribeEvent
 	public void onRegisterCraftingEvent(RegistryEvent.Register<IRecipe> event) {
-		AetherAddonRegistries.craftingRegistry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
-
 		AetherAddonDictionary.initialization();
-		AetherAddonRegistries.registerRecipes();
+		AetherAddonRegistries.initializeRecipes((IForgeRegistryModifiable<IRecipe>) event.getRegistry());
+	}
+	
+	@SubscribeEvent
+	public void onRegisterEnchantmentEvent(RegistryEvent.Register<AetherEnchantment> event) {
+		AetherAddonRegistries.initializeEnchantments(event.getRegistry());
 	}
 
 }

@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.legacy.aether.Aether;
 import com.legacy.aether.addon.blocks.BlockAetherPressurePlate.Sensitivity;
+import com.legacy.aether.addon.items.ItemAetherionChest;
 import com.legacy.aether.addon.items.ItemSkyrootChest;
 import com.legacy.aether.blocks.BlocksAether;
 import com.legacy.aether.items.block.ItemAetherSlab;
@@ -28,6 +29,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class BlocksAetherAddon {
 	public static Block skyroot_workbench;
 	public static BlockChest skyroot_chest;
+	public static Block aetherion_chest;
 	public static Block skyroot_ladder;
 	
 	public static Block skyroot_standing_sign;
@@ -63,6 +65,8 @@ public class BlocksAetherAddon {
 			register("skyroot_crafting_table", skyroot_workbench = new BlockSkyrootWorkbench().setHardness(2.5F));
 		if (enable_skyroot_chest)
 			registerWithItem("skyroot_chest", skyroot_chest = new BlockSkyrootChest(), new ItemSkyrootChest(skyroot_chest));
+		if (enable_aetherion_chest)
+			registerWithItem("aetherion_chest", aetherion_chest = new BlockAetherionChest(), new ItemAetherionChest(aetherion_chest));
 		if (enable_skyroot_ladder)
 			register("skyroot_ladder", skyroot_ladder = new BlockSkyrootLadder());
 		if (enable_skyroot_sign) {
