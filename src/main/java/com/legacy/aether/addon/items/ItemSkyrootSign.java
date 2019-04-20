@@ -1,6 +1,7 @@
 package com.legacy.aether.addon.items;
 
 import com.legacy.aether.addon.blocks.BlocksAetherAddon;
+import com.legacy.aether.registry.creative_tabs.AetherCreativeTabs;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.BlockStandingSign;
@@ -21,6 +22,11 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class ItemSkyrootSign extends ItemSign {
+	
+	public ItemSkyrootSign() {
+		setCreativeTab(AetherCreativeTabs.blocks);
+	}
+	
 	/**
 	 * Called when a Block is right-clicked with this Item
 	 */

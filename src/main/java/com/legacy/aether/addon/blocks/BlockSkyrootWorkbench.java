@@ -14,6 +14,10 @@ import net.minecraft.world.World;
 
 public class BlockSkyrootWorkbench extends BlockWorkbench {
 
+	public BlockSkyrootWorkbench() {
+		setHardness(2.5F);
+	}
+	
 	/**
 	 * Called when the block is right clicked by a player.
 	 */

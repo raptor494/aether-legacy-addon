@@ -30,7 +30,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 	dependencies = "required-after:aether_legacy@[1.4.4,);after-client:moolands;")
 public class AetherAddon {
 	public static final String modid = "aether_legacy_addon";
-	public static final String version = "1.12.2-v1.2.2";
+	public static final String version = "${version}";
 	
 	@Instance(AetherAddon.modid)
 	public static AetherAddon instance;

@@ -29,7 +29,8 @@ import net.minecraft.world.World;
 public class ItemSkyrootBed extends ItemBed {
 
 	public ItemSkyrootBed() {
-		this.setHasSubtypes(true);
+		setHasSubtypes(true);
+		setCreativeTab(AetherCreativeTabs.blocks);
 	}
 	
 	/*public String getUnlocalizedName(ItemStack stack) {

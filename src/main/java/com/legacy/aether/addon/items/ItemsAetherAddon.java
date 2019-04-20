@@ -36,31 +36,38 @@ public class ItemsAetherAddon {
 
 	public static void initialization() {		
 		if (enable_skyroot_door())
-			register("skyroot_door", skyroot_door = new ItemDoor(BlocksAetherAddon.skyroot_door).setCreativeTab(AetherCreativeTabs.blocks));
+			skyroot_door = register("skyroot_door", new ItemDoor(BlocksAetherAddon.skyroot_door).setCreativeTab(AetherCreativeTabs.blocks));
+		
 		if (enable_zanite_door())
-			register("zanite_door", zanite_door = new ItemDoor(BlocksAetherAddon.zanite_door).setCreativeTab(AetherCreativeTabs.blocks));	
+			zanite_door = register("zanite_door", new ItemDoor(BlocksAetherAddon.zanite_door).setCreativeTab(AetherCreativeTabs.blocks));
+		
 		
 		if (enable_skyroot_sign)
-			register("skyroot_sign", skyroot_sign = new ItemSkyrootSign().setCreativeTab(AetherCreativeTabs.blocks));
+			skyroot_sign = register("skyroot_sign", new ItemSkyrootSign());
+		
 		
 		if (enable_skyroot_beds)
-			register("skyroot_bed", skyroot_bed = new ItemSkyrootBed().setCreativeTab(AetherCreativeTabs.blocks));
+			skyroot_bed = register("skyroot_bed", new ItemSkyrootBed());
+		
 		
 		if (enable_cockatrice_meat) {
-			register("cockatrice", cockatrice = new ItemCockatrice(2, 0.1f));
-			register("burnt_cockatrice", burnt_cockatrice = new ItemCockatrice(4, 0.1f));
-			register("enchanted_cockatrice", enchanted_cockatrice = new ItemAetherFood(6, 0.6f).setPotionEffect(new PotionEffect(MobEffects.HUNGER, 600, 0), 0.3F));
-			register("cooked_enchanted_cockatrice", cooked_enchanted_cockatrice = new ItemAetherFood(10, 0.8f));
+			cockatrice = register("cockatrice", new ItemCockatrice(2, 0.1f));
+			burnt_cockatrice = register("burnt_cockatrice", new ItemCockatrice(4, 0.1f));
+			enchanted_cockatrice = register("enchanted_cockatrice", new ItemAetherFood(6, 0.6f).setPotionEffect(new PotionEffect(MobEffects.HUNGER, 600, 0), 0.3F));
+			cooked_enchanted_cockatrice = register("cooked_enchanted_cockatrice", new ItemAetherFood(10, 0.8f));
 		}
 		
+		
 		if (enable_aetherion_chest)
-			register("aetherium_core", aetherium_core = new Item().setCreativeTab(AetherCreativeTabs.material));
+			aetherium_core = register("aetherium_core", new Item().setCreativeTab(AetherCreativeTabs.material));
 	}
 	
-	public static void register(String name, Item item) {
+	public static <I extends Item> I register(String name, I item) {
 		item.setUnlocalizedName(name)
-		    .setRegistryName(Aether.locate(name));
+			.setRegistryName(Aether.locate(name));
 		
 		itemRegistry.register(item);
+		
+		return item;
 	}
 }

@@ -24,9 +24,12 @@ public class BlockAetherPressurePlate extends BlockBasePressurePlate {
 
 	protected BlockAetherPressurePlate(Material materialIn, BlockAetherPressurePlate.Sensitivity sensitivityIn, SoundType soundTypeIn) {
 		super(materialIn);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(POWERED, Boolean.valueOf(false)));
-		this.setSoundType(soundTypeIn);
-		this.sensitivity = sensitivityIn;
+		
+		setDefaultState(this.blockState.getBaseState().withProperty(POWERED, Boolean.valueOf(false)));
+		setSoundType(soundTypeIn);
+		setHardness(0.5F);
+		
+		sensitivity = sensitivityIn;
 	}
 
 	protected int getRedstoneStrength(IBlockState state) {

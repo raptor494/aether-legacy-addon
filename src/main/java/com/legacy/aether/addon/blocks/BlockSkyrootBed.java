@@ -28,6 +28,10 @@ import net.minecraft.world.WorldProvider.WorldSleepResult;
 
 public class BlockSkyrootBed extends BlockBed {
 	
+	public BlockSkyrootBed() {
+		setHardness(0.2F);
+	}
+	
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new TileEntitySkyrootBed();
 	}
