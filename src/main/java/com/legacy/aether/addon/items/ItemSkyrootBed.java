@@ -2,7 +2,6 @@ package com.legacy.aether.addon.items;
 
 import com.legacy.aether.addon.AetherAddonConfig;
 import com.legacy.aether.addon.blocks.BlocksAetherAddon;
-import com.legacy.aether.addon.tile_entities.TileEntitySkyrootBed;
 import com.legacy.aether.registry.creative_tabs.AetherCreativeTabs;
 
 import net.minecraft.advancements.CriteriaTriggers;
@@ -10,13 +9,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
-import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBed;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -34,20 +30,6 @@ public class ItemSkyrootBed extends ItemBed {
 
 	public ItemSkyrootBed() {
 		this.setHasSubtypes(true);
-		
-		this.setTileEntityItemStackRenderer(new TileEntityItemStackRenderer() {
-			private final TileEntitySkyrootBed bed = new TileEntitySkyrootBed();
-
-			public void renderByItem(ItemStack stack, float partialTicks) {
-				Item item = stack.getItem();
-				if(item == ItemsAetherAddon.skyroot_bed) {
-					this.bed.setItemValues(stack);
-					TileEntityRendererDispatcher.instance.render(this.bed, 0.0D, 0.0D, 0.0D, 0.0F, partialTicks);
-				} else {
-					super.renderByItem(stack, partialTicks);
-				}
-			}
-		});
 	}
 	
 	/*public String getUnlocalizedName(ItemStack stack) {

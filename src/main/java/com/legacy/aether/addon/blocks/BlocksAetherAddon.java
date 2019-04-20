@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.legacy.aether.Aether;
 import com.legacy.aether.addon.blocks.BlockAetherPressurePlate.Sensitivity;
-import com.legacy.aether.addon.items.ItemAetherionChest;
 import com.legacy.aether.addon.items.ItemSkyrootChest;
 import com.legacy.aether.blocks.BlocksAether;
 import com.legacy.aether.items.block.ItemAetherSlab;
@@ -66,7 +65,7 @@ public class BlocksAetherAddon {
 		if (enable_skyroot_chest)
 			registerWithItem("skyroot_chest", skyroot_chest = new BlockSkyrootChest(), new ItemSkyrootChest(skyroot_chest));
 		if (enable_aetherion_chest)
-			registerWithItem("aetherion_chest", aetherion_chest = new BlockAetherionChest(), new ItemAetherionChest(aetherion_chest));
+			registerWithItem("aetherion_chest", aetherion_chest = new BlockAetherionChest(), new ItemBlock(aetherion_chest));
 		if (enable_skyroot_ladder)
 			register("skyroot_ladder", skyroot_ladder = new BlockSkyrootLadder());
 		if (enable_skyroot_sign) {

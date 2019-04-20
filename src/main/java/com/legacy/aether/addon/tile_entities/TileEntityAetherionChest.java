@@ -89,6 +89,7 @@ public class TileEntityAetherionChest extends TileEntity implements IInteraction
 	/**
 	 * Like the old updateEntity(), except more generic.
 	 */
+	@SuppressWarnings("unused")
 	public void update() {
 		int i = this.pos.getX();
 		int j = this.pos.getY();

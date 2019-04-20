@@ -6,7 +6,6 @@ import static com.legacy.aether.client.renders.blocks.BlockRendering.registerBlo
 
 import com.legacy.aether.addon.blocks.BlocksAetherAddon;
 import com.legacy.aether.addon.client.renders.AetherAddonEntityRenderingRegistry;
-import com.legacy.aether.blocks.BlocksAether;
 import com.legacy.aether.client.renders.blocks.AetherStateMap;
 
 import net.minecraft.block.BlockBed;
