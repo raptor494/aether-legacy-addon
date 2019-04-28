@@ -1,5 +1,7 @@
 package com.legacy.aether.addon.registry;
 
+import com.legacy.aether.Aether;
+import com.legacy.aether.addon.AetherAddonConfig;
 import com.legacy.aether.addon.blocks.BlocksAetherAddon;
 import com.legacy.aether.addon.dictionary.AetherAddonDictionary;
 import com.legacy.aether.addon.items.ItemsAetherAddon;
@@ -9,6 +11,16 @@ import com.legacy.aether.registry.AetherRegistryEvent;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.storage.loot.LootEntry;
+import net.minecraft.world.storage.loot.LootEntryItem;
+import net.minecraft.world.storage.loot.LootPool;
+import net.minecraft.world.storage.loot.LootTable;
+import net.minecraft.world.storage.loot.RandomValueRange;
+import net.minecraft.world.storage.loot.conditions.LootCondition;
+import net.minecraft.world.storage.loot.functions.LootFunction;
+import net.minecraft.world.storage.loot.functions.LootingEnchantBonus;
+import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistryModifiable;
@@ -82,4 +94,21 @@ public class AetherAddonRegistryEvent {
 		AetherAddonRegistries.initializeEnchantments(event.getRegistry());
 	}
 
+	private static final ResourceLocation MIMIC_LOOT = Aether.locate("entities/chest_mimic");
+	
+	@SubscribeEvent
+	public void onLootTableLoadEvent(LootTableLoadEvent event) {
+		// replaces mimic's vanilla chest drops with skyroot chest drops
+		if(AetherAddonConfig.enable_skyroot_chest && event.getName().equals(MIMIC_LOOT)) {
+			LootTable table = event.getTable();
+			LootPool chest = table.getPool("chest");
+			if(chest == null) return;
+			LootEntry entry = chest.getEntry("minecraft:chest");
+			if(entry == null || !(entry instanceof LootEntryItem)) return;
+			LootEntryItem item = new LootEntryItem(Item.getItemFromBlock(BlocksAetherAddon.skyroot_chest), 1, 1, new LootFunction[] { new LootingEnchantBonus(new LootCondition[0], new RandomValueRange(0,1), 0) }, new LootCondition[0], "aether_legacy:skyroot_chest");
+			chest.removeEntry("minecraft:chest");
+			chest.addEntry(item);
+		}
+	}
+	
 }

@@ -1,5 +1,8 @@
 package com.legacy.aether.addon.items;
 
+import javax.annotation.Nullable;
+
+import com.legacy.aether.addon.AetherAddon;
 import com.legacy.aether.addon.blocks.BlocksAetherAddon;
 import com.legacy.aether.registry.creative_tabs.AetherCreativeTabs;
 
@@ -75,4 +78,10 @@ public class ItemSkyrootSign extends ItemSign {
 			return EnumActionResult.FAIL;
 		}
 	}
+	
+	@Nullable
+	public String getCreatorModId(ItemStack itemStack) {
+		return AetherAddon.modid;
+	}
+	
 }

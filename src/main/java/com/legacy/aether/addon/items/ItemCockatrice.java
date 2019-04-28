@@ -1,5 +1,8 @@
 package com.legacy.aether.addon.items;
 
+import javax.annotation.Nullable;
+
+import com.legacy.aether.addon.AetherAddon;
 import com.legacy.aether.api.AetherAPI;
 import com.legacy.aether.items.food.ItemAetherFood;
 
@@ -16,6 +19,11 @@ public class ItemCockatrice extends ItemAetherFood {
 	@Override
 	protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player) {
 		AetherAPI.getInstance().get(player).inflictPoison(300);
+	}
+	
+	@Nullable
+	public String getCreatorModId(ItemStack itemStack) {
+		return AetherAddon.modid;
 	}
 	
 }

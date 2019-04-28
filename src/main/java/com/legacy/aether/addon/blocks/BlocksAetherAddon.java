@@ -5,7 +5,10 @@ import static com.legacy.aether.addon.AetherAddonConfig.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.legacy.aether.Aether;
+import com.legacy.aether.addon.AetherAddon;
 import com.legacy.aether.addon.blocks.BlockAetherPressurePlate.Sensitivity;
 import com.legacy.aether.blocks.BlocksAether;
 import com.legacy.aether.items.block.ItemAetherSlab;
@@ -19,6 +22,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**
@@ -143,7 +147,12 @@ public class BlocksAetherAddon {
 		slab1.setCreativeTab(AetherCreativeTabs.blocks);
 
 		blockList.add(slab1.setRegistryName(Aether.locate(name)));
-		itemList.add(new ItemAetherSlab(slab1, (BlockSlab)slab1, (BlockSlab)slab2).setRegistryName(Aether.locate(name)));
+		itemList.add(new ItemAetherSlab(slab1, (BlockSlab)slab1, (BlockSlab)slab2) {
+			@Nullable
+			public String getCreatorModId(ItemStack itemStack) {
+				return AetherAddon.modid;
+			}
+		}.setRegistryName(Aether.locate(name)));
 		
 		return slab1;
 	}
@@ -153,7 +162,12 @@ public class BlocksAetherAddon {
 		block.setCreativeTab(AetherCreativeTabs.blocks);
 
 		blockList.add(block.setRegistryName(Aether.locate(name)));
-		itemList.add(new ItemBlock(block).setRegistryName(Aether.locate(name)));
+		itemList.add(new ItemBlock(block) {
+			@Nullable
+			public String getCreatorModId(ItemStack itemStack) {
+				return AetherAddon.modid;
+			}
+		}.setRegistryName(Aether.locate(name)));
 		
 		return block;
 	}
@@ -164,7 +178,12 @@ public class BlocksAetherAddon {
 			.setRegistryName(Aether.locate(name));
 		
 		blockList.add(block);
-		itemList.add(new ItemSubtype(block).setRegistryName(Aether.locate(name)));
+		itemList.add(new ItemSubtype(block) {
+			@Nullable
+			public String getCreatorModId(ItemStack itemStack) {
+				return AetherAddon.modid;
+			}
+		}.setRegistryName(Aether.locate(name)));
 		
 		return block;
 	}

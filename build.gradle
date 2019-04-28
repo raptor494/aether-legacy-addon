@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 version = "${mc_version}-v${mod_version}"
 group = "com.aether.legacy"
-archivesBaseName = "Aether Continuation"
+archivesBaseName = "aether_continuation"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
