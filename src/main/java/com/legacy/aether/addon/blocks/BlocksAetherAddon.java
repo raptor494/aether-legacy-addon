@@ -158,7 +158,7 @@ public class BlocksAetherAddon {
 	}
 
 	public static <B extends Block> B register(String name, B block) {
-		block.setUnlocalizedName(name);
+		block.setTranslationKey(name);
 		block.setCreativeTab(AetherCreativeTabs.blocks);
 
 		blockList.add(block.setRegistryName(Aether.locate(name)));
@@ -173,7 +173,7 @@ public class BlocksAetherAddon {
 	}
 
 	public static <B extends Block> B registerMeta(String name, B block) {
-		block.setUnlocalizedName(name)
+		block.setTranslationKey(name)
 			.setCreativeTab(AetherCreativeTabs.blocks)
 			.setRegistryName(Aether.locate(name));
 		
@@ -189,10 +189,10 @@ public class BlocksAetherAddon {
 	}
 	
 	public static <B extends Block> B registerWithItem(String name, B block, Item item) {
-		block.setUnlocalizedName(name)
+		block.setTranslationKey(name)
 			.setCreativeTab(AetherCreativeTabs.blocks)
 			.setRegistryName(Aether.locate(name));
-		item.setUnlocalizedName(name)
+		item.setTranslationKey(name)
 			.setCreativeTab(AetherCreativeTabs.blocks)
 			.setRegistryName(Aether.locate(name));
 		
@@ -203,7 +203,7 @@ public class BlocksAetherAddon {
 	}
 	
 	public static <B extends Block> B registerNoItem(String name, B block) {
-		block.setUnlocalizedName(name)
+		block.setTranslationKey(name)
 			.setCreativeTab(null)
 			.setRegistryName(Aether.locate(name));
 		

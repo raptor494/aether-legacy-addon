@@ -87,7 +87,7 @@ public class ItemsAetherAddon {
 	}
 	
 	public static <I extends Item> I register(String name, I item) {
-		item.setUnlocalizedName(name)
+		item.setTranslationKey(name)
 			.setRegistryName(Aether.locate(name));
 		
 		itemRegistry.register(item);

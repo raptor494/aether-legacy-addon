@@ -24,7 +24,7 @@ public class SkyrootBedRenderer extends TileEntitySpecialRenderer<TileEntitySkyr
 
 	@Override
 	public void render(TileEntitySkyrootBed te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
-		if (this.version != this.model.getModelVersion()) {
+		if(this.version != this.model.getModelVersion()) {
 			this.model = new ModelBed();
 			this.version = this.model.getModelVersion();
 		}
@@ -32,10 +32,10 @@ public class SkyrootBedRenderer extends TileEntitySpecialRenderer<TileEntitySkyr
 		boolean flag = te != null && te.getWorld() != null;
 		boolean flag1 = flag ? te.isHeadPiece() : true;
 
-		if (te != null && te.getWorld() != null && te.getPos() != null && te.isHeadPiece()) {
-			TileEntity foot = te.getWorld().getTileEntity(te.getPos().offset(EnumFacing.getHorizontal(te.getBlockMetadata()).getOpposite()));
-			if (foot instanceof TileEntityBed) {
-				if (te.getColor() != ((TileEntityBed) foot).getColor()) {
+		if(te != null && te.getWorld() != null && te.getPos() != null && te.isHeadPiece()) {
+			TileEntity foot = te.getWorld().getTileEntity(te.getPos().offset(EnumFacing.byHorizontalIndex(te.getBlockMetadata()).getOpposite()));
+			if(foot instanceof TileEntityBed) {
+				if(te.getColor() != ((TileEntityBed) foot).getColor()) {
 					te.setColor(((TileEntityBed) foot).getColor());
 				}
 			}
@@ -44,7 +44,7 @@ public class SkyrootBedRenderer extends TileEntitySpecialRenderer<TileEntitySkyr
 		EnumDyeColor enumdyecolor = te != null && AetherAddonConfig.enable_colored_skyroot_beds()? te.getColor() : EnumDyeColor.LIGHT_BLUE;
 		int i = flag ? te.getBlockMetadata() & 3 : 0;
 
-		if (destroyStage >= 0) {
+		if(destroyStage >= 0) {
 			this.bindTexture(DESTROY_STAGES[destroyStage]);
 			GlStateManager.matrixMode(5890);
 			GlStateManager.pushMatrix();
@@ -54,7 +54,7 @@ public class SkyrootBedRenderer extends TileEntitySpecialRenderer<TileEntitySkyr
 		} else {
 			ResourceLocation resourcelocation = TEXTURES[enumdyecolor.getMetadata()];
 
-			if (resourcelocation != null) {
+			if(resourcelocation != null) {
 				this.bindTexture(resourcelocation);
 			}
 		}
