@@ -27,7 +27,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * @see Aether
  */
 @Mod(name = "Aether Continuation", modid = AetherAddon.modid, version = AetherAddon.version, acceptedMinecraftVersions = "1.12.2",
-	dependencies = "required-after:aether_legacy@[1.4.4,);after-client:moolands;")
+	dependencies = "required-after:aether_legacy@[1.5.0,);after-client:moolands;")
 public class AetherAddon {
 	public static final String modid = "aether_legacy_addon";
 	public static final String version = "${version}";
